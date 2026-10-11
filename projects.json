@@ -1,0 +1,69 @@
+{
+  "featuredProduct": {
+    "id": "notion-workspace",
+    "badge": "Prodotto in Evidenza",
+    "category": "🚀 Notion Workspace Template",
+    "title": "Organizza la tua vita e il tuo lavoro con il Template Notion definitivo",
+    "description": "Un sistema di gestione completo, strutturato e pronto all'uso su Notion. Progettato per tracciare progetti, attività, obiettivi e note in un unico hub digitale chiaro e coordinato.",
+    "highlights": [
+      "Setup immediato in 1-Click",
+      "Dashboard bilanciata & Minimal",
+      "Layout responsive mobile & desktop",
+      "Download immediato dopo il checkout"
+    ],
+    "stripeUrl": "https://buy.stripe.com/9B6bJ2deKaktbHV7gJdUY01",
+    "qrCodeImage": "qr_9B6bJ2deKaktbHV7gJdUY01.png"
+  },
+  "webApps": [
+    {
+      "id": "calcolo-costi",
+      "icon": "📊",
+      "badge": "Web App",
+      "title": "Calcolo Costi",
+      "description": "Calcolatore e tool di stima per determinare margini, costi aziendali e preventivi in modo chiaro e strutturato.",
+      "url": "https://calcolocosti.mattiafarinaro.cc/",
+      "buttonText": "Apri Calcolo Costi"
+    },
+    {
+      "id": "quick-invoice",
+      "icon": "📄",
+      "badge": "Utility",
+      "title": "Quick Invoice Pro",
+      "description": "Generatore istantaneo di fatture con integrazione di pagamenti Stripe per una gestione documentale fluida e professionale.",
+      "url": "https://quickinvoice.mattiafarinaro.cc/",
+      "buttonText": "Apri Quick Invoice"
+    }
+  ],
+  "digitalProducts": [
+    {
+      "id": "gumroad-resource",
+      "platform": "Gumroad",
+      "platformBadgeColor": "amber",
+      "tag": "Download Digitale",
+      "title": "Risorsa Digitale Gumroad",
+      "description": "Template e guida pratica ottimizzata per potenziare la tua workflow quotidiana.",
+      "url": "https://mattinaro.gumroad.com/l/ohnuca",
+      "buttonText": "Vedi su Gumroad"
+    },
+    {
+      "id": "etsy-planner",
+      "platform": "Etsy Shop",
+      "platformBadgeColor": "orange",
+      "tag": "Italiano",
+      "title": "Social Media Content Planner",
+      "description": "Planner completo in italiano per organizzare la strategia editoriale, la pubblicazione e l'analisi dei tuoi canali social.",
+      "url": "https://www.etsy.com/it/listing/4592419918/social-media-content-planner-in-italiano",
+      "buttonText": "Vedi su Etsy"
+    },
+    {
+      "id": "etsy-prompts",
+      "platform": "Etsy Shop",
+      "platformBadgeColor": "orange",
+      "tag": "Prompt Guide",
+      "title": "50 Prompt Potenti per l'AI",
+      "description": "Raccolta strategica di prompt avanzati per sfruttare l'Intelligenza Artificiale nel business, monetizzazione e produttività.",
+      "url": "https://www.etsy.com/it/listing/4592411952/50-prompt-potenti-per-fare-soldi-con-lai",
+      "buttonText": "Vedi su Etsy"
+    }
+  ]
+}

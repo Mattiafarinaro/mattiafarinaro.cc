@@ -53,10 +53,10 @@
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between transition-colors duration-300 relative">
 
-    <!-- Header / Nav -->
-    <header class="w-full py-5 px-6 md:px-12 max-w-6xl mx-auto flex justify-between items-center relative z-50 border-b border-slate-200 dark:border-slate-800/80 mb-6">
-        <a href="#" class="flex items-center space-x-3">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center font-bold text-lg text-slate-950 shadow-lg shadow-brand-500/20">
+    <!-- Header / Nav (Glassmorphism Agency Style) -->
+    <header class="sticky top-0 w-full py-4 px-6 md:px-12 max-w-7xl mx-auto flex justify-between items-center z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
+        <a href="#" class="flex items-center space-x-3 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center font-bold text-lg text-slate-950 shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
                 MF
             </div>
             <div class="flex flex-col">
@@ -66,15 +66,16 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-8 text-sm text-slate-600 dark:text-slate-300">
-            <a href="#magazine-featured" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors font-medium">In Evidenza</a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+            <a href="#magazine-featured" class="hover:text-brand-600 dark:hover:text-emerald-400 transition-colors">In Evidenza</a>
             <a href="#notion-template" class="hover:text-slate-900 dark:hover:text-white transition-colors">Template Notion</a>
             <a href="#webapp" class="hover:text-slate-900 dark:hover:text-white transition-colors">Web Apps</a>
             <a href="#digital-products" class="hover:text-slate-900 dark:hover:text-white transition-colors">Digital Shop</a>
             <a href="#chi-sono" class="hover:text-slate-900 dark:hover:text-white transition-colors">Chi sono</a>
             
-            <button id="theme-toggle" aria-label="Cambia Tema" class="p-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 border border-slate-300 dark:border-slate-700 transition-all">
-                <svg id="theme-toggle-sun-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <!-- Dark / Light Mode Toggle Button (Desktop) -->
+            <button id="theme-toggle" aria-label="Cambia Tema" class="p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-emerald-400 border border-slate-300/60 dark:border-slate-700 transition-all hover:scale-105">
+                <svg id="theme-toggle-sun-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 <svg id="theme-toggle-moon-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
             </button>
         </nav>
@@ -82,7 +83,7 @@
         <!-- Mobile Controls -->
         <div class="flex items-center space-x-3 md:hidden">
             <button id="theme-toggle-mobile" aria-label="Cambia Tema" class="p-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700">
-                <svg id="theme-toggle-sun-icon-mobile" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <svg id="theme-toggle-sun-icon-mobile" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 <svg id="theme-toggle-moon-icon-mobile" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
             </button>
 
@@ -92,8 +93,9 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-6 flex-col space-y-4 shadow-2xl md:hidden">
-            <a href="#magazine-featured" class="mobile-nav-link text-emerald-600 dark:text-emerald-400 font-semibold text-lg">In Evidenza Oggi</a>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-6 flex-col space-y-4 shadow-2xl md:hidden">
+            <a href="#magazine-featured" class="mobile-nav-link text-brand-600 dark:text-emerald-400 font-semibold text-lg">In Evidenza Oggi</a>
             <a href="#notion-template" class="mobile-nav-link text-slate-700 dark:text-slate-200 font-medium text-lg">Template Notion</a>
             <a href="#webapp" class="mobile-nav-link text-slate-700 dark:text-slate-200 font-medium text-lg">Web Apps</a>
             <a href="#digital-products" class="mobile-nav-link text-slate-700 dark:text-slate-200 font-medium text-lg">Digital Shop</a>
@@ -103,116 +105,141 @@
 
     <main class="flex-grow">
         <!-- Hero Magazine Intro -->
-        <section class="max-w-5xl mx-auto px-6 pt-6 pb-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-10">
+        <section class="max-w-6xl mx-auto px-6 pt-12 pb-16 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12">
             <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-xs text-brand-600 dark:text-brand-400 mb-4 shadow-sm">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200/80 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-xs font-semibold text-brand-600 dark:text-brand-400 mb-6 shadow-sm">
                     <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
                     Magazine Editoriale & Resource Hub
                 </div>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight">
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
                     Strumenti, idee e prodotti <br class="hidden sm:inline"><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-emerald-500 dark:from-brand-400 dark:to-emerald-200">per lavorare meglio.</span>
                 </h1>
-                <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Un punto di riferimento per trovare template Notion avanzati, calcolatori web veloci, utility e guide pratiche sempre aggiornate.
+                <p class="text-base md:text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                    Un punto di riferimento per trovare template Notion avanzati, calcolatori web veloci, utility e guide pratiche sempre aggiornate in tempo reale.
                 </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#magazine-featured" class="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-brand-600 hover:from-emerald-400 hover:to-brand-500 text-white font-bold transition-all shadow-lg shadow-brand-600/30 text-center flex items-center justify-center gap-2">
+                        <span>Esplora in Evidenza</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <a href="#chi-sono" class="px-8 py-4 rounded-xl bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-300 font-semibold transition-all border border-slate-300 dark:border-slate-700 text-center">
+                        Scopri il Profilo
+                    </a>
+                </div>
             </div>
             
-            <!-- Widget Random Resource Spotlight -->
+            <!-- Widget Random Resource Spotlight (Serendipity Feature) -->
             <div id="random-spotlight" class="w-full md:w-auto flex-shrink-0">
-                <!-- Generato Dinamicamente -->
+                <div class="p-6 rounded-3xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 shadow-2xl max-w-sm mx-auto text-left backdrop-blur-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-[11px] font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 font-bold">Consigliato dal Magazine</span>
+                        <span class="text-sm">✨</span>
+                    </div>
+                    <h4 class="text-base font-bold text-slate-900 dark:text-white mb-2">Caricamento risorse...</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Esplora l'ecosistema di strumenti digitali creati da Mattia Farinaro.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Sezione Magazine "In Evidenza Oggi" -->
-        <section id="magazine-featured" class="py-6 px-6 md:px-12 max-w-5xl mx-auto">
+        <!-- Sezione Magazine "In Evidenza" -->
+        <section id="magazine-featured" class="py-12 px-6 md:px-12 max-w-6xl mx-auto">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">In Evidenza Oggi</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Il progetto di punta sincronizzato direttamente dal database.</p>
+                </div>
+                <span class="hidden sm:inline-flex text-xs font-mono px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">Aggiornato in tempo reale</span>
+            </div>
             <div id="notion-container">
-                <!-- Generato dinamicamente dal foglio Google -->
+                <div class="p-12 text-center text-slate-400 bg-slate-100 dark:bg-slate-800/40 rounded-3xl">Sincronizzazione in corso con Google Sheets...</div>
             </div>
         </section>
 
         <!-- Web Apps Section -->
-        <section id="webapp" class="bg-slate-100/60 dark:bg-slate-950/50 border-t border-b border-slate-200 dark:border-slate-800/60 py-16 md:py-20 px-6 md:px-12">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">Web Application & Utility</h2>
-                    <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto text-sm md:text-base">Tool autonomi e ad alta velocità pensati per calcoli aziendali, preventivi e fatturazione.</p>
+        <section id="webapp" class="bg-slate-100/60 dark:bg-slate-950/50 border-t border-b border-slate-200 dark:border-slate-800/80 py-16 md:py-24 px-6 md:px-12">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Utility & SaaS</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-3 mb-3">Web Application & Utility</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto text-sm md:text-base">Tool autonomi ad alta velocità pensati per calcoli aziendali, preventivi e fatturazione.</p>
                 </div>
-                <div id="webapp-container" class="grid md:grid-cols-2 gap-6 sm:gap-8"></div>
+                <div id="webapp-container" class="grid md:grid-cols-2 gap-8"></div>
             </div>
         </section>
 
         <!-- Digital Shop Section -->
-        <section id="digital-products" class="py-16 md:py-20 px-6 md:px-12 max-w-5xl mx-auto">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">Digital Shop & Prompt Guide</h2>
+        <section id="digital-products" class="py-16 md:py-24 px-6 md:px-12 max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">E-Commerce Digitale</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-3 mb-3">Digital Shop & Prompt Guide</h2>
                 <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto text-sm md:text-base">Risorse scaricabili pronte all'uso per la pianificazione dei contenuti e la produttività AI.</p>
             </div>
-            <div id="shop-container" class="grid md:grid-cols-3 gap-6"></div>
+            <div id="shop-container" class="grid md:grid-cols-3 gap-8"></div>
         </section>
 
         <!-- About Section -->
-        <section id="chi-sono" class="bg-slate-100/60 dark:bg-slate-950/60 border-t border-slate-200 dark:border-slate-800/80 py-16 md:py-24 px-6 md:px-12">
+        <section id="chi-sono" class="bg-slate-100/80 dark:bg-slate-950/80 border-t border-slate-200 dark:border-slate-800/80 py-20 md:py-28 px-6 md:px-12">
             <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-500/20">
                         Profilo Professionale
                     </span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mt-4 mb-4">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mt-4 mb-4">
                         Chi sono
                     </h2>
                     <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
-                        Nato a Trento nel 1984. Ho costruito la mia esperienza professionale sul campo, unendo la gestione delle relazioni con il territorio all'innovazione digitale.
+                        Nato a Trento nel 1984. Esperienza sul campo, unendo la gestione delle relazioni istituzionali e territoriali all'innovazione digitale.
                     </p>
                 </div>
 
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-xl mb-10 space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
+                <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-200 dark:border-slate-800 shadow-2xl mb-12 space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed text-base md:text-lg">
                     <p>
-                        Ho iniziato il mio percorso lavorando nell'accoglienza e nella gestione dei servizi, imparando fin da subito la lezione più importante: <strong class="text-slate-900 dark:text-white">le cose funzionano davvero quando si ascoltano le esigenze delle persone e del territorio.</strong>
+                        Ho iniziato il mio percorso lavorando nell'accoglienza e nella gestione dei servizi, imparando fin da subito la lezione più importante: <strong class="text-slate-900 dark:text-white font-semibold">le cose funzionano davvero quando si ascoltano le esigenze delle persone e del territorio.</strong>
                     </p>
                     <p>
-                        Nel corso degli anni ho maturato sei anni di esperienza in Confcommercio Trentino, approfondendo il dialogo costante con le imprese, le associazioni e le realtà locali. Oggi lavoro come <strong class="text-slate-900 dark:text-white">Capo di Gabinetto dell'Assessorato all'Istruzione, Cultura, Giovani e Pari Opportunità della Provincia Autonoma di Trento</strong>, occupandomi di fare da raccordo tra l'attività politico-istituzionale, le strutture dell'ente e la comunità.
+                        Nel corso degli anni ho maturato sei anni di esperienza in Confcommercio Trentino, approfondendo il dialogo costante con le imprese, le associazioni e le realtà locali. Oggi lavoro come <strong class="text-slate-900 dark:text-white font-semibold">Capo di Gabinetto dell'Assessorato all'Istruzione, Cultura, Giovani e Pari Opportunità della Provincia Autonoma di Trento</strong>, occupandomi di fare da raccordo tra l'attività politico-istituzionale, le strutture dell'ente e la comunità.
                     </p>
                     <p>
                         Parallelamente coltivo una forte passione per il web design, la produttività digitale e le nuove tecnologie (in particolare l'integrazione di intelligenza artificiale, workflow in Notion e web app leggere). Creo strumenti digitali pensati per rendere più semplice e immediato il lavoro quotidiano.
                     </p>
                 </div>
 
-                <div class="grid sm:grid-cols-2 gap-6 mb-12">
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-md">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl mb-4">🏛️</div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Istituzioni e Pubblica Amministrazione</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <div class="grid sm:grid-cols-2 gap-6 mb-16">
+                    <div class="p-8 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-xl hover:border-emerald-500/40 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-6 shadow-inner">🏛️</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Istituzioni e PA</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Coordinamento dell'ufficio di gabinetto, raccordo istituzionale, relazioni con i portatori di interesse e supporto alle politiche pubbliche locali.
                         </p>
                     </div>
 
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-md">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl mb-4">💬</div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Relazioni & Comunicazione</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <div class="p-8 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-xl hover:border-emerald-500/40 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-6 shadow-inner">💬</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Relazioni & Comunicazione</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Pianificazione strategica della comunicazione istituzionale, gestione dei canali e valorizzazione delle iniziative del territorio.
                         </p>
                     </div>
 
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-md">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl mb-4">🏔️</div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Territorio & Sviluppo Locale</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <div class="p-8 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-xl hover:border-emerald-500/40 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-6 shadow-inner">🏔️</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Territorio & Sviluppo Locale</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Profonda conoscenza del tessuto economico, culturale e sociale trentino, con attenzione alle opportunità per giovani e imprese.
                         </p>
                     </div>
 
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-md">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl mb-4">💻</div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Web Apps & Produttività</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <div class="p-8 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-xl hover:border-emerald-500/40 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-6 shadow-inner">💻</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Web Apps & Produttività</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Progettazione di micro web app (Astro, Cloudflare, Tailwind) e sistemi Notion per ottimizzare flussi di lavoro, organizzazione e calcolo.
                         </p>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <a href="https://www.linkedin.com/in/mattiafarinaro/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white font-medium transition-all border border-slate-700 shadow-lg">
+                    <a href="https://www.linkedin.com/in/mattiafarinaro/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white font-semibold transition-all border border-slate-700 shadow-xl hover:scale-105">
                         <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         <span>Collegati con me su LinkedIn</span>
                     </a>
@@ -222,18 +249,17 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 px-6 text-center text-xs text-slate-500">
-        <p>&copy; 2026 Mattia Farinaro. Tutti i diritti riservati.</p>
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-6 text-center text-xs text-slate-500 bg-white dark:bg-slate-950">
+        <p>&copy; 2026 Mattia Farinaro. Tutti i diritti riservati. Realizzato con passione e tecnologia Cloudflare & Google Sheets.</p>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Torna in cima" class="fixed bottom-6 right-6 p-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-50 transform translate-y-2 hover:scale-105">
+    <button id="back-to-top" aria-label="Torna in cima" class="fixed bottom-6 right-6 p-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-50 transform translate-y-2 hover:scale-105">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
     <!-- Script CMS Google Sheets + Engine Dinamico Magazine -->
     <script>
-        // LINK AL TUO GOOGLE SHEET PUBBLICATO COME CSV
         const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT27kaBlzKyFiwC5tWCrpBe9STzkNUGteoNlInoKKELmUT3snijEAwMyLTVlNJD4gWh_FkiLfGpErKZ/pub?output=csv';
 
         function parseCSV(text) {
@@ -256,6 +282,7 @@
                 renderMagazine(projects);
             } catch (error) {
                 console.error("Errore nel caricamento dei dati da Google Sheets:", error);
+                document.getElementById('notion-container').innerHTML = '<p class="text-center text-red-400">Impossibile caricare i dati dal database remoto.</p>';
             }
         }
 
@@ -269,18 +296,18 @@
             webappContainer.innerHTML = '';
             shopContainer.innerHTML = '';
 
-            // 1. Random Resource Spotlight Widget
+            // 1. Random Resource Spotlight Widget (Serendipity)
             if (projects.length > 0) {
                 const randomItem = projects[Math.floor(Math.random() * projects.length)];
                 randomSpotlight.innerHTML = `
-                    <div class="p-5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 shadow-xl max-w-sm mx-auto text-left">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold">Consigliato Oggi</span>
-                            <span class="text-xs text-slate-500">${randomItem.icon || '✨'}</span>
+                    <div class="p-6 rounded-3xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 shadow-2xl max-w-sm mx-auto text-left backdrop-blur-xl transition-all hover:scale-[1.02]">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-mono uppercase tracking-widest text-brand-600 dark:text-brand-400 font-bold">Consigliato dal Magazine</span>
+                            <span class="text-sm">${randomItem.icon || '✨'}</span>
                         </div>
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">${randomItem.title}</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-3 line-clamp-2">${randomItem.description}</p>
-                        <a href="${randomItem.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                        <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1.5">${randomItem.title}</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">${randomItem.description}</p>
+                        <a href="${randomItem.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-emerald-400 hover:underline">
                             <span>Scopri di più</span>
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
@@ -292,17 +319,17 @@
             projects.forEach(p => {
                 if (p.section === 'notion') {
                     notionContainer.innerHTML = `
-                        <div class="relative rounded-3xl p-6 sm:p-8 md:p-12 bg-gradient-to-br from-slate-100 via-white to-emerald-50 dark:from-slate-900 dark:via-slate-800 dark:to-emerald-950/60 border-2 border-emerald-500/50 shadow-2xl shadow-emerald-900/10 dark:shadow-emerald-900/20 overflow-hidden">
+                        <div class="relative rounded-3xl p-8 md:p-12 bg-gradient-to-br from-slate-100 via-white to-emerald-50 dark:from-slate-900 dark:via-slate-800 dark:to-emerald-950/60 border-2 border-emerald-500/50 shadow-2xl shadow-emerald-900/10 dark:shadow-emerald-900/20 overflow-hidden">
                             <div class="inline-block md:absolute md:-top-1 md:-right-1 bg-gradient-to-l from-emerald-500 to-brand-500 text-slate-950 font-extrabold text-xs uppercase tracking-widest px-4 py-1.5 md:px-6 md:py-2 rounded-full md:rounded-none md:rounded-bl-2xl shadow-md mb-6 md:mb-0">
                                 Prodotto in Evidenza
                             </div>
-                            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-10 relative z-10">
+                            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 relative z-10">
                                 <div class="max-w-xl text-left">
-                                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-4">
+                                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-4">
                                         <span>${p.icon || '🚀'} ${p.badge_text || 'Notion Workspace'}</span>
                                     </div>
-                                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 leading-tight">${p.title}</h2>
-                                    <p class="text-slate-600 dark:text-slate-300 text-sm md:text-lg mb-6 leading-relaxed">${p.description}</p>
+                                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 leading-tight">${p.title}</h3>
+                                    <p class="text-slate-600 dark:text-slate-300 text-base md:text-lg mb-8 leading-relaxed">${p.description}</p>
                                     <div class="flex flex-col sm:flex-row items-center gap-4">
                                         <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-center transition-all shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2">
                                             <span>${p.button_text || 'Acquista Ora'}</span>
@@ -312,8 +339,8 @@
                                     </div>
                                 </div>
                                 ${p.stripe_qr ? `
-                                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200 dark:border-emerald-500/30 text-center shadow-xl max-w-xs w-full">
-                                    <img src="${p.stripe_qr}" alt="QR Code" class="w-44 h-44 sm:w-48 sm:h-48 rounded-xl object-contain shadow-md mb-4 bg-white p-2">
+                                <div class="flex flex-col items-center p-6 bg-white dark:bg-slate-900/90 rounded-3xl border border-slate-200 dark:border-emerald-500/30 text-center shadow-xl max-w-xs w-full">
+                                    <img src="${p.stripe_qr}" alt="QR Code" class="w-44 h-44 sm:w-48 sm:h-48 rounded-2xl object-contain shadow-md mb-4 bg-white p-2">
                                     <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">Pagamento Rapido</span>
                                     <p class="text-xs text-slate-500 dark:text-slate-400">Inquadra per acquistare al volo</p>
                                 </div>` : ''}
@@ -321,32 +348,32 @@
                         </div>`;
                 } else if (p.section === 'webapp') {
                     webappContainer.innerHTML += `
-                        <div class="group relative bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg">
+                        <div class="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between shadow-xl hover:shadow-2xl">
                             <div>
                                 <div class="flex justify-between items-start mb-6">
-                                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 text-xl font-bold">${p.icon || '💻'}</div>
-                                    <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">${p.badge_text}</span>
+                                    <div class="w-14 h-14 rounded-2xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-500 text-2xl font-bold">${p.icon || '💻'}</div>
+                                    <span class="text-xs font-mono px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">${p.badge_text}</span>
                                 </div>
                                 <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-brand-500 transition-colors">${p.title}</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">${p.description}</p>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8">${p.description}</p>
                             </div>
-                            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 dark:hover:bg-brand-600 text-slate-800 dark:text-slate-200 hover:text-white text-sm font-medium transition-all border border-slate-200 dark:border-slate-700/60">
+                            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-5 py-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 dark:hover:bg-brand-600 text-slate-800 dark:text-slate-200 hover:text-white dark:hover:text-white text-sm font-semibold transition-all border border-slate-200 dark:border-slate-700/60">
                                 <span>${p.button_text}</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
                         </div>`;
                 } else if (p.section === 'shop') {
                     shopContainer.innerHTML += `
-                        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-slate-300 dark:hover:border-slate-700 transition-all shadow-lg">
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-slate-300 dark:hover:border-slate-700 transition-all shadow-xl hover:shadow-2xl">
                             <div>
-                                <div class="flex items-center justify-between mb-4">
-                                    <span class="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">${p.badge_text}</span>
-                                    <span class="text-xs text-slate-500">${p.icon || '📦'}</span>
+                                <div class="flex items-center justify-between mb-6">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">${p.badge_text}</span>
+                                    <span class="text-base">${p.icon || '📦'}</span>
                                 </div>
-                                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">${p.title}</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">${p.description}</p>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">${p.title}</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-8 leading-relaxed">${p.description}</p>
                             </div>
-                            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white text-sm font-medium transition-colors border border-slate-200 dark:border-slate-700">
+                            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white text-sm font-semibold transition-colors border border-slate-200 dark:border-slate-700">
                                 <span>${p.button_text}</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
@@ -357,16 +384,29 @@
 
         document.addEventListener('DOMContentLoaded', loadProjects);
 
-        // UI Controls
+        // UI Controls (Dark/Light Mode)
         const htmlEl = document.documentElement;
         const themeBtnDesktop = document.getElementById('theme-toggle');
         const themeBtnMobile = document.getElementById('theme-toggle-mobile');
         
+        const sunIconDesktop = document.getElementById('theme-toggle-sun-icon');
+        const moonIconDesktop = document.getElementById('theme-toggle-moon-icon');
+        const sunIconMobile = document.getElementById('theme-toggle-sun-icon-mobile');
+        const moonIconMobile = document.getElementById('theme-toggle-moon-icon-mobile');
+
         function updateThemeUI(isDark) {
             if (isDark) {
                 htmlEl.classList.add('dark');
+                sunIconDesktop.classList.remove('hidden');
+                moonIconDesktop.classList.add('hidden');
+                sunIconMobile.classList.remove('hidden');
+                moonIconMobile.classList.add('hidden');
             } else {
                 htmlEl.classList.remove('dark');
+                sunIconDesktop.classList.add('hidden');
+                moonIconDesktop.classList.remove('hidden');
+                sunIconMobile.classList.add('hidden');
+                moonIconMobile.classList.remove('hidden');
             }
         }
 
@@ -387,18 +427,35 @@
         // Mobile Menu
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu() {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
         });
 
-        // Back to top
+        // Back to top button
         const backToTopBtn = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
-                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+                backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
             } else {
-                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+                backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
             }
         });
         backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
